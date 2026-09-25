@@ -1,0 +1,106 @@
+:root {
+  color-scheme: dark;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #1e293b, #020617 60%);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: var(--text);
+}
+
+main {
+  width: min(92vw, 420px);
+  padding: 28px;
+  border-radius: 24px;
+  background: rgba(17, 24, 39, 0.72);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  touch-action: none;
+  cursor: grab;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+svg.dragging {
+  cursor: grabbing;
+}
+
+svg:focus-visible {
+  filter: drop-shadow(0 0 8px #818cf8);
+}
+
+.track {
+  fill: none;
+  stroke: rgba(148, 163, 184, 0.18);
+  stroke-width: 14;
+  stroke-linecap: round;
+}
+
+.value {
+  fill: none;
+  stroke: url(#grad);
+  stroke-width: 14;
+  stroke-linecap: round;
+  stroke-dasharray: 0 100;
+  transition: stroke-dasharray 0.08s linear;
+}
+
+.handle {
+  fill: #ffffff;
+  stroke: #818cf8;
+  stroke-width: 4;
+  filter: drop-shadow(0 0 10px rgba(129, 140, 248, 0.8));
+}
+
+.label {
+  fill: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.unit {
+  fill: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+kbd {
+  font: inherit;
+  font-size: 0.72em;
+  padding: 1px 6px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+}
+
+p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 14px 0 0;
+}
